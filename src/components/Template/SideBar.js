@@ -22,12 +22,20 @@ const SideBar = () => (
       <p>Hi, I&apos;m Jakob. I like building things.
         I am a data scientist, Esri employee, <a href="https://icme.stanford.edu/">FSU</a> graduate. Before Arthena I was
         at <a href="https://matroid.com">St. Charles County IT</a>
-  
+
         , and <a href="https://seds.org">T-Kartor</a>.
       </p>
       <ul className="actions">
         <li>
-          {!window.location.pathname.includes('/resume') ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
+          {!window.location.pathname.includes('/resume') ? (
+            <Link to="/resume" className="button">
+              Learn More
+            </Link>
+          ) : (
+            <Link to="/about" className="button">
+              About Me
+            </Link>
+          )}
         </li>
       </ul>
     </section>
